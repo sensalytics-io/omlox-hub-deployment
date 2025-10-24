@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: omlox
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+
+  omlox-hub:
+    image: ghcr.io/sensalytics-io/omlox-hub:latest
+    container_name: omlox-hub
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/omlox
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: pass
+    ports:
+      - "80:8080"
+    volumes:
+      - "./license/<YOUR_LICENSE>.slylc:/license/omlox-hub.slylc:ro"
