@@ -16,8 +16,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/omlox
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: pass
-      LICENSE_PATH: file:/license/omlox-hub.slylc
     ports:
       - "80:8080"
     volumes:
-      - "./license/:/license"
+      - "./license/<YOUR_LICENSE>.slylc:/license/omlox-hub.slylc:ro"
