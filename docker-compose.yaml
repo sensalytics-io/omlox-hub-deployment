@@ -17,6 +17,6 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: pass
     ports:
-      - "80:8080"
+      - "5000:8080"
     volumes:
       - "./license/<YOUR_LICENSE>.slylc:/license/omlox-hub.slylc:ro"
