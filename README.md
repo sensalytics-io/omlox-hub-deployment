@@ -34,9 +34,9 @@ Follow these steps to get your omlox Hub instance up and running:
    git clone https://github.com/sensalytics-io/omlox-hub-setup.git
    cd omlox-hub-setup
    ```
-2. Obtain your license file (.slyc) and place it in the `license` directory of the project.
+2. Obtain your license file (.slylc) and place it in the `license` directory of the project.
 3. Edit the `docker-compose.yml` file:
-    - Replace `YOUR_LICENSE` with the actual filename of your `.slyc` license file.
+    - Replace `YOUR_LICENSE` with the actual filename of your `.slylc` license file.
 4. Start the services using Docker Compose:
    ```bash
    docker-compose up -d
